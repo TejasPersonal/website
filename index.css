@@ -1,70 +1,119 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-@font-face {
-    font-family: 'Adwaita Mono';
-    src: url('fonts/adwaita-mono/AdwaitaMono-Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Adwaita Mono';
-    src: url('./fonts/adwaita-mono/AdwaitaMono-Bold.ttf') format('truetype');
-    font-weight: bold;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Adwaita Mono';
-    src: url('./fonts/adwaita-mono/AdwaitaMono-Italic.ttf') format('truetype');
-    font-weight: normal;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: 'Adwaita Mono';
-    src: url('./fonts/adwaita-mono/AdwaitaMono-BoldItalic.ttf') format('truetype');
-    font-weight: bold;
-    font-style: italic;
-}
-
-
-@font-face {
-    font-family: 'Adwaita Sans';
-    src: url('./fonts/adwaita-sans/AdwaitaSans-Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Adwaita Sans';
-    src: url('./fonts/adwaita-sans/AdwaitaSans-Italic.ttf') format('truetype');
-    font-weight: normal;
-    font-style: italic;
+    word-wrap: break-word;
 }
 
 body {
     background-color: black;
     color: white;
-    font-family: 'Adwaita Sans';
+    font-family: sans-serif;
+    background-image: url(images/elon.webp);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow:hidden;
+}
+
+#body {
+    display: block;
+    height: 100vh;
+    width: 100%;
+    overflow-y: auto;
 }
 
 #navigation-bar {
+    display: block;
+    top: 0;
+    left: 0;
     position: fixed;
     background-color: rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(20px);
     width: 100%;
+}
+
+#navigation-bar .left {
+    float: left;    
+    padding: 15px;    
+}
+
+#navigation-bar img {
+    float: left;
+    height: 32px;
+    margin: 8px;
+    margin-right: 0;
+}
+
+#navigation-bar .right {
+    float: right;
     padding: 15px;
 }
 
-#navigation-bar left {
-    float: left;
+#navigation-bar a {
+    text-decoration: none;
+    color: white;
 }
 
-#navigation-bar right {
+#navigation-bar a:hover {
+    background-color: rgba(0, 0, 0, 0.15);
+}
+
+#scroll-text {
+    display: flex;
+    height: 100vh;
+    padding: 20px;
+    align-items: center;
+    font-size: 100px;
+    font-weight: bold;
+    text-shadow: 3px 3px 10px violet;
+}
+
+.info {
+    display: block;
+    margin: 30px;
+    padding: 20px;
+    background-color: rgba(128, 128, 128, 0.5);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.info .image {
+    display: inline-block;
+    width: 30%;
+    border-radius: 20px;
+    transition: 200ms;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.info .image:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.25), 0 12px 40px 0 rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+}
+
+.info .image:active {
+    transform: scale(0.9);
+}
+
+.info div {
     float: right;
+    background-color: rgba(128, 128, 128, 0.25);
+    width: 68%;
+    border-radius: 10px;
+    padding: 15px;
+    transition: 250ms;
+    border: 3px solid rgba(128, 128, 128, 0.25);
+}
+
+.info div:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#among-us {
+    position: fixed;
+    top: 50%;
+    left: 0;
+    transform: translate(0, -50%);
+    width: 50%;
+    z-index: -1;
+    transition: 500ms;
+    filter: opacity(0);
 }

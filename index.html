@@ -3,19 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="index.css">
-    <title>Website</title>
+    <title>Silly</title>
 </head>
 <body>
     <div id="navigation-bar">
-        <left>STUFF</left>
-        <right>MORE STUFF BUT TO THE RIGHT</right>
+        <img src="logo.png" id="demon">
+        <div class="left">SILLY</div>
+        <a href="#demon" class="right" onclick="summon()">SUMMON A DEMON</a>
+        <a href="#told-you" class="right" onclick="among_us()">DON'T CLICK</a>
+        <a href="#told-you" class="right" onclick="fix()" id="useless-button">A USELESS BUTTON</a>
     </div>
-    
-    <img src="foster-lake.jpg" alt="" width="100%">
 
-    <div style="height: 200vh; display: inline-block;">
-        <!-- this is just to create temprary scrolling space -->
+    <img src="images/among-us.gif" id="among-us">
+
+    <div id="body">
+
+        <div id="scroll-text">SCROLL BIG BOY</div>
+
+        <div class="info">
+            <div>
+                <h2>The Rock</h2>
+                I've not watched a single bad movie of this man.
+                <br><br>
+                To know more about him, you should <span style="color: rgb(0, 255, 229);">click</span> on him multiple times.
+            </div>
+            <img src="images/rocks/the-rock-pink.avif" class="image" id="the-rock">
+        </div>
+
     </div>
+
+    <audio src="audio/siren meme ｜ sound effect [YrV667_7XIU].opus" id="siren" loop></audio>
+    <audio src="audio/Evil Laugh Sound Effect (Your search is over) [KkJ_lT5MdFc].opus" id="scary" loop></audio>
 </body>
+<script>
+    let amongus = document.getElementById('among-us')
+    let body = document.querySelector('body')
+    let rock = document.getElementById("the-rock")
+    let siren = document.getElementById("siren")
+    let rockn = 0
+    let rocks = [
+        "images/rocks/the-rock-pink.avif",
+        "images/rocks/the-rock-meme.bmp",
+        "images/rocks/the-rock-2.png"
+    ]
+
+    rock.onclick = function() {
+        rockn++
+        if (rockn == rocks.length) {
+            rockn = 0
+        }
+        rock["src"] = rocks[rockn]
+    }
+
+    let useless_button = document.getElementById('useless-button')
+
+    function fix() {
+        siren.pause()
+        body.style.backgroundImage = "url('images/elon.webp')"
+        amongus.style.filter = "opacity(0)"
+        useless_button.style.backgroundColor = ""
+    }
+
+    function among_us() {
+        siren.play()
+        body.style.backgroundImage = "url('images/soldier-meme.jpg')"
+        amongus.style.filter = "opacity(1)"
+        useless_button.style.backgroundColor = "red"
+    }
+
+    let demon = document.getElementById('demon')
+    let scary_audio = document.getElementById('scary')
+    demon.style.height = "32px"
+
+    function summon() {
+        scary_audio.play()
+        setInterval(function () {
+            demon.style.height = (parseInt(demon.style.height) + 1) + 'px';
+            console.log(demon.style.height)
+        })
+    }
+</script>
 </html>
