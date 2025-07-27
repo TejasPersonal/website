@@ -4,9 +4,53 @@
     box-sizing: border-box;
 }
 
+@font-face {
+    font-family: 'Adwaita Mono';
+    src: url('fonts/adwaita-mono/AdwaitaMono-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Adwaita Mono';
+    src: url('./fonts/adwaita-mono/AdwaitaMono-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Adwaita Mono';
+    src: url('./fonts/adwaita-mono/AdwaitaMono-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Adwaita Mono';
+    src: url('./fonts/adwaita-mono/AdwaitaMono-BoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+
+@font-face {
+    font-family: 'Adwaita Sans';
+    src: url('./fonts/adwaita-sans/AdwaitaSans-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Adwaita Sans';
+    src: url('./fonts/adwaita-sans/AdwaitaSans-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
 body {
     background-color: black;
     color: white;
+    font-family: 'Adwaita Sans';
 }
 
 #navigation-bar {
