@@ -14,4 +14,13 @@ body {
     background-color: rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(20px);
     width: 100%;
+    padding: 15px;
+}
+
+#navigation-bar left {
+    float: left;
+}
+
+#navigation-bar right {
+    float: right;
 }
