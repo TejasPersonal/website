@@ -67,7 +67,7 @@ body {
 }
 
 .info {
-    display: block;
+    display: inline-block;
     margin: 30px;
     padding: 20px;
     background-color: rgba(128, 128, 128, 0.5);
